@@ -165,7 +165,7 @@ h1 {
         font-size: 12px; /* Adjust paragraph size */
         margin: 5px 0; /* Add some margin for spacing */
     }
-
+    
     .right a img {
         width: 100%; /* Make the flag counter responsive */
         max-width: 250px; /* Set a maximum width for mobile */
@@ -187,4 +187,16 @@ h1 {
     .checkbox-label {
         padding: 3px; /* Reduced padding */
     }
+
+    .checkbox-label .ball {
+        background-color: #fff;
+        width: 22px;
+        height: 20px;
+        position: absolute;
+        left: 5px;
+        top: 6px;
+        border-radius: 50%;
+        transition: transform 0.2s linear;
+    }
+    
 }
