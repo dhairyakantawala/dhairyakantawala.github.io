@@ -128,7 +128,7 @@ h1 {
     }
 
     h1 {
-        font-size: 24px; /* Smaller title size for mobile */
+        font-size: 16px; /* Smaller title size for mobile */
     }
 
     .content {
@@ -138,7 +138,7 @@ h1 {
     }
 
     .left {
-        margin: 0 0 10px 0; /* Remove right margin and add bottom margin */
+        margin: 0 0 6px 0; /* Remove right margin and add bottom margin */
     }
 
     .photo {
@@ -156,9 +156,25 @@ h1 {
         margin-top: 5px; /* Add some margin */
     }
 
+    h2 {
+
+        text-align: center;
+    }
+
     .right p {
         font-size: 12px; /* Adjust paragraph size */
         margin: 5px 0; /* Add some margin for spacing */
+    }
+
+    .right a img {
+        width: 100%; /* Make the flag counter responsive */
+        max-width: 250px; /* Set a maximum width for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+
+    p {
+        text-align: center;
     }
 
     .toggle-container {
