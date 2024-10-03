@@ -115,49 +115,60 @@ h1 {
     margin-top: 5px;
     line-height: 0.2;
 }
+
+
+
 /* Base styles (for desktop) remain the same */
 
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
-    /* Adjust body font size and line height */
+    /* Adjust body font size */
     body {
-        font-size: 14px;
+        font-size: 12px; /* Smaller base font size for mobile */
     }
 
     h1 {
-        font-size: 36px; /* Smaller title size for mobile */
+        font-size: 24px; /* Smaller title size for mobile */
     }
 
     .content {
         flex-direction: column; /* Stack the left and right sections vertically */
         align-items: center; /* Center align items */
+        padding: 10px; /* Add some padding */
     }
 
     .left {
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 20px; /* Add some space below the image */
+        margin: 0 0 10px 0; /* Remove right margin and add bottom margin */
     }
 
     .photo {
         width: 100%; /* Make the image responsive */
-        max-width: 250px; /* Maintain max size */
+        max-width: 200px; /* Set a max width for the image */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .right {
-        font-size: 24px; /* Smaller font size for mobile */
+        font-size: 14px; /* Smaller font size for mobile */
     }
 
     .right h2 {
-        font-size: 28px; /* Adjust heading size */
+        font-size: 18px; /* Adjust heading size */
+        margin-top: 5px; /* Add some margin */
     }
 
     .right p {
-        font-size: 16px; /* Adjust paragraph size */
+        font-size: 12px; /* Adjust paragraph size */
+        margin: 5px 0; /* Add some margin for spacing */
     }
 
     .toggle-container {
-        top: 15px; /* Adjust position for smaller screens */
-        left: 15px; /* Adjust position for smaller screens */
+        top: 10px; /* Adjust position for smaller screens */
+        left: 10px; /* Adjust position for smaller screens */
+        z-index: 10; /* Ensure toggle is above other elements */
+    }
+
+    /* Add padding to the toggle button */
+    .checkbox-label {
+        padding: 3px; /* Reduced padding */
     }
 }
-
