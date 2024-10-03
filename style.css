@@ -116,7 +116,60 @@ h1 {
     line-height: 0.2;
 }
 
+/* Button styles */
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+.resume-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Light mode styles */
+.resume-button.one-page {
+    background-color: lightcoral; /* Light red for light mode */
+    color: rgb(255, 255, 255);
+}
+.resume-button.two-page {
+    background-color: lightcoral; /* Light red for light mode */
+    color: rgb(255, 255, 255);
+}
+
+.resume-button.one-page:hover {
+    background-color: #e74c3c; /* Darker red on hover */
+}
+
+.resume-button.two-page:hover {
+    background-color: #e74c3c; /* Darker red on hover */
+}
+
+/* Dark mode styles */
+body.dark-mode .resume-button.two-page {
+    background-color: #e74c3c; /* A lighter red for dark mode */
+    color: white;
+}
+
+body.dark-mode .resume-button.two-page:hover {
+    background-color: lightcoral; /* Darker red on hover */
+}
+/* Dark mode styles */
+body.dark-mode .resume-button.one-page {
+    background-color: #e74c3c; /* A lighter red for dark mode */
+    color: white;
+}
+
+body.dark-mode .resume-button.one-page:hover {
+    background-color: lightcoral; /* Darker red on hover */
+}
 
 /* Base styles (for desktop) remain the same */
 
