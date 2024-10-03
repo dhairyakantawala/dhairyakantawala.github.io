@@ -115,4 +115,49 @@ h1 {
     margin-top: 5px;
     line-height: 0.2;
 }
+/* Base styles (for desktop) remain the same */
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    /* Adjust body font size and line height */
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 36px; /* Smaller title size for mobile */
+    }
+
+    .content {
+        flex-direction: column; /* Stack the left and right sections vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .left {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add some space below the image */
+    }
+
+    .photo {
+        width: 100%; /* Make the image responsive */
+        max-width: 250px; /* Maintain max size */
+    }
+
+    .right {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    .right h2 {
+        font-size: 28px; /* Adjust heading size */
+    }
+
+    .right p {
+        font-size: 16px; /* Adjust paragraph size */
+    }
+
+    .toggle-container {
+        top: 15px; /* Adjust position for smaller screens */
+        left: 15px; /* Adjust position for smaller screens */
+    }
+}
 
