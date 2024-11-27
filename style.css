@@ -1,3 +1,4 @@
+/* Base styles */
 @font-face {
     font-family: 'MyCustomFont';
     src: url('your-font.ttf') format('truetype');
@@ -139,49 +140,81 @@ h1 {
     background-color: lightcoral; /* Light red for light mode */
     color: rgb(255, 255, 255);
 }
+
 .resume-button.two-page {
     background-color: lightcoral; /* Light red for light mode */
     color: rgb(255, 255, 255);
 }
 
-.resume-button.one-page:hover {
-    background-color: #e74c3c; /* Darker red on hover */
-}
-
+.resume-button.one-page:hover,
 .resume-button.two-page:hover {
     background-color: #e74c3c; /* Darker red on hover */
 }
 
 /* Dark mode styles */
+body.dark-mode .resume-button.one-page,
 body.dark-mode .resume-button.two-page {
     background-color: #e74c3c; /* A lighter red for dark mode */
     color: white;
 }
 
+body.dark-mode .resume-button.one-page:hover,
 body.dark-mode .resume-button.two-page:hover {
     background-color: lightcoral; /* Darker red on hover */
 }
-/* Dark mode styles */
-body.dark-mode .resume-button.one-page {
-    background-color: #e74c3c; /* A lighter red for dark mode */
-    color: white;
+
+/* Navigation Menu Styles */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0;
 }
 
-body.dark-mode .resume-button.one-page:hover {
-    background-color: lightcoral; /* Darker red on hover */
+.nav-menu li {
+    display: inline; /* Display items inline */
+    margin: 0 15px; /* Spacing between items */
 }
 
-/* Base styles (for desktop) remain the same */
+.nav-button {
+    padding: 10px 20px;
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.nav-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Notes Button Styles */
+.note-button {
+    padding: 15px 30px;
+    background-color: #2ecc71; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Transition effect */
+    font-size: 20px; /* Font size */
+    display: block; /* Block display for centering */
+    margin: 20px auto; /* Center the button */
+}
+
+.note-button:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
 
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
-    /* Adjust body font size */
     body {
         font-size: 12px; /* Smaller base font size for mobile */
     }
 
     h1 {
-        font-size: 16px; /* Smaller title size for mobile */
+        font-size: 24px; /* Smaller title size for mobile */
     }
 
     .content {
@@ -209,25 +242,9 @@ body.dark-mode .resume-button.one-page:hover {
         margin-top: 5px; /* Add some margin */
     }
 
-    h2 {
-
-        text-align: center;
-    }
-
     .right p {
         font-size: 12px; /* Adjust paragraph size */
         margin: 5px 0; /* Add some margin for spacing */
-    }
-    
-    .right a img {
-        width: 100%; /* Make the flag counter responsive */
-        max-width: 250px; /* Set a maximum width for mobile */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-
-    p {
-        text-align: center;
     }
 
     .toggle-container {
@@ -251,5 +268,4 @@ body.dark-mode .resume-button.one-page:hover {
         border-radius: 50%;
         transition: transform 0.2s linear;
     }
-    
 }

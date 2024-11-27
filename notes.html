@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your existing CSS -->
+    <style>
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+
+        .note-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 15px;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .note-card:hover {
+            transform: scale(1.05);
+        }
+
+        .note-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .note-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .note-link {
+            text-decoration: none;
+            background: #4a90e2;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            transition: background 0.3s ease;
+            margin: 5px 0; /* Space between buttons */
+        }
+
+        .note-link:hover {
+            background: #357ab8;
+        }
+
+        .note-links {
+            display: flex;
+            flex-direction: column; /* Stack links vertically */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toggle-container">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
+
+    <header>
+        <h1>My Notes</h1>
+    </header>
+    
+    <div class="container">
+        <div class="notes-box">
+            <div class="note-card">
+                <div class="note-title">MA 401</div>
+                <div class="note-description">Linear Algebra</div>
+                <div class="note-links">
+                    <a href="notes/MA401.pdf" target="_blank" class="note-link">Class Notes</a>
+                    <a href="notes/MA401 tuts.pdf" target="_blank" class="note-link">Tut Solutions</a>
+                </div>
+            </div>
+
+            <div class="note-card">
+                <div class="note-title">MA 403</div>
+                <div class="note-description">Real Analysis</div>
+                <div class="note-links">
+                    <a href="notes/MA403_1.pdf" target="_blank" class="note-link">Class Notes part 1</a>
+                    <a href="notes/MA403_2.pdf" target="_blank" class="note-link">Class Notes part 2</a>
+                    <a href="notes/MA403 tuts.pdf" target="_blank" class="note-link">Tut Solutions</a>
+                </div>
+            </div>
+
+            <div class="note-card">
+                <div class="note-title">MA 419</div>
+                <div class="note-description">Basic Algebra</div>
+                <div class="note-links">
+                    <a href="notes/MA419.pdf" target="_blank" class="note-link">Class Notes</a>
+                    <a href="notes/MA419 tuts.pdf" target="_blank" class="note-link">Tut Solutions</a>
+                </div>
+            </div>
+
+            <div class="note-card">
+                <div class="note-title">SI 427</div>
+                <div class="note-description">Probability 1</div>
+                <div class="note-links">
+                    <a href="notes/SI427.pdf" target="_blank" class="note-link">Class Notes</a>
+                    <a href="notes/SI427 tuts.pdf" target="_blank" class="note-link">Tut Solutions</a>
+                </div>
+            </div>
+
+            <div class="note-card">
+                <div class="note-title">EC 101</div>
+                <div class="note-description">Economics, only micro</div>
+                <div class="note-links">
+                    <a href="notes/EC101.pdf" target="_blank" class="note-link">Class Notes</a>
+                </div>
+            </div>
+
+            <div class="note-card">
+                <div class="note-title">DS 203</div>
+                <div class="note-description">Programming for Data Science</div>
+                <div class="note-links">
+                    <a href="notes/DS203.pdf" target="_blank" class="note-link">Class Notes</a>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <script>
+        const checkbox = document.getElementById("checkbox");
+ checkbox.addEventListener("change", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+
+</html>
