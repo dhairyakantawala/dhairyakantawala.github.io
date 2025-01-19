@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Finance Blog</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Slightly lighter background */
+            color: #444; /* Darker text for better readability */
+        }
+        
+        header {
+            background: #0056b3; /* Darker blue for a more elegant look */
+            color: #fff;
+            padding: 30px 0; /* Increased padding for a more spacious feel */
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px; /* Added letter spacing for elegance */
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto; /* Increased margin for more breathing room */
+            padding: 30px; /* Increased padding for a more spacious feel */
+            background: #fff;
+            border-radius: 10px; /* Slightly more rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for a more pronounced effect */
+            transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+        
+        .container:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+        }
+        
+        footer {
+            text-align: center;
+            padding: 15px 0; /* Increased padding for a more balanced footer */
+            background: #0056b3; /* Consistent footer color */
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .content {
+            margin-top: 30px; /* Increased margin for better separation */
+        }
+        
+        .content h2 {
+            color: #0056b3; /* Consistent color for subheadings */
+            margin-bottom: 15px; /* Added margin for spacing */
+            font-size: 1.8em; /* Slightly smaller than h1 for hierarchy */
+        }
+        
+        .content p {
+            margin: 15px 0; /* Increased margin for better readability */
+            line-height: 1.8; /* Increased line height for improved readability */
+            color: #555; /* Softer text color for paragraphs */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Finance Blog</h1>
+</header>
+
+<div class="container">
+    <div class="content">
+        <h2>Mutual Fund Terminology</h2>
+        <p><strong>NAV (Net Asset Value)</strong> = (Total Assets - Total Liabilities) / Number of Outstanding Shares. NAV is like the stock price equivalent of a MF or ETF. NAV does not matter and usually investors see it but it is pointless as say if NAV is 10 and I buy 3 then I am investing 30. Similarly, if NAV is 5 and I am investing 30 then I will just buy 6 stocks.</p>
+
+        <p><strong>Sharpe Ratio</strong> is the comparison of the return of an investment upon its underlying risk. Now there are 2 main things here, the return of investment and also the underlying risk. The return on investment is the difference of returns (percentage returns) and the risk-free returns (In India it is the 10-year government bond returns as it is considered risk-free). The risk is the standard deviation of the same return over the same time period as the deviation is the measure of risk/volatility.</p>
+
+        <p><strong>Sortino Ratio</strong> is the same as Sharpe Ratio, the only difference is here we take the downside risk and not the actual risk. The downside risk is the standard deviation of only the negative returns. So downside risk = root of sigma(min(Ri - Rf, 0))/N.</p>
+
+        <p><strong>Capital Asset Pricing Model (CAPM)</strong> is just a formula as E[Ri] - Rf = beta (E[Rm] - Rf), where Ri = Returns of the portfolio, Rf is the risk-free returns and Rm is the returns of some market portfolio (In India, say Nifty). The beta is the cov(Ri, Rm)/Var(Rm), it is the risk profile, so beta more than 1 means our portfolio is more risky than the market and less than 1 means it is less risky than the market portfolio.</p>
+
+        <p><strong>Jensen’s Alpha</strong> = Rp - [Rf + beta(Rm - Rf)] so here this means that alpha is the excess returns the portfolio gets. Rp is the portfolio’s actual return, Rf is the risk-free rate and so Rf + beta(Rm - Rf) is the expected returns of the portfolio and when we subtract it with Rp we get the excess returns a portfolio makes. So more positive alpha means that the portfolio outperformed and negative means underperformance by the CAPM model.</p>
+
+        <p><strong>R Squared</strong> is 1 - SSr/SSt, where SSr is the sum of square of residuals, where it is sigma square of Ri - Rp where Rp is the predicted returns using some linear model. SSt is the total variance and is the sigma square of Ri - modR where modR is the mean of returns by the portfolio. R squared captures the essence of how well the portfolio ’s returns are explained by the market. If R squared is 0.82 then 82% of the portfolio’s returns are explained by the market (In India it is the Nifty index).</p>
+
+        <p><strong>Downside and Upside Deviation</strong> is the downside risk and the upside risk (see Sortino ratio denominator). The downside deviation is the standard deviation of the returns that fall below a threshold (here it is Rf). Similarly, the upside deviation is the standard deviation of the returns that fall above a threshold (here it is Rf). A less than 5 percent means that the portfolio has excellent or minimal downside risk. A good upside deviation is 5% to 10%. More than 15 means that the portfolio is very aggressive and has significant potential for high returns.</p>
+
+        <p><strong>Downside and Upside Capture Ratios</strong> are two very important ratios. The downside capture ratio or downside portfolio returns / downside market returns indicate how better is the downside protection of the portfolio. If this value is less than one then it means that the portfolio is doing really well when it comes to downside protection. The upside ratio is the same but for the upside returns of the portfolio / the market upside returns. A value of more than one is a good thing as it means that the portfolio is making more than the market in the upside trend.</p>
+
+        <p><strong>AUM</strong> is the average asset under management and when we take the fund’s expense * 100 and divide by the AUM we get the expense ratio. A high expense ratio reduces the net returns for the investors and say if the fund is making 10% returns then what the investors will get at the end of 1 year is 10% - expense ratio.</p>
+
+        <p><strong>CAGR</strong> or Compound Annual Growth Rate is how much returns we get after a year as the returns are compounded. So after say 10 days if the fund makes 2% then now instead of using 100% of what was put in, the fund uses 102% of then hopefully does the same. Here a CAGR of 15% will double the money put in after 5 years. Similarly, a CAGR value of 32% can double your money in 2.5 years.</p>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="content">
+        <h2>Price & Valuation Fundamentals</h2>
+
+        <p><strong>Current Market Price (CMP):</strong> This is called the CMP, as the name suggests, it is the current market price of a stock denoted by P_latest.</p>
+
+        <p><strong>52-Week High/Low:</strong> This is the highest price at which the stock traded and the lowest price. By looking at this metric, one gets a good idea of the volatility of the stock. For example, if the CMP = 100, the 52-week high = 120, and the 52-week low = 80, we can understand the stock’s volatility. A stock performing near the 52-week high is performing well, while a stock near the 52-week low is not performing well. The 52-week high and low can also be seen as support and resistance levels.</p>
+
+        <p><strong>Market Capitalisation:</strong> This is calculated as CMP * number of stocks in the market. Stocks with a market cap of more than 100,000 crores are considered large-cap. The top 100 stocks by market cap are large-cap, 100-250 are mid-cap, and 250 and beyond are small-cap.</p>
+
+        <p><strong>Enterprise Value:</strong> This is the total money needed to acquire 100% of the company. EV = Market cap + debt - cash. A high market cap does not always indicate a good investment; EV provides a clearer picture. For example, if Company A has a market cap of 100 with 100 in debt and 10 in cash, its EV = 190. Company B, with the same market cap but 10 in debt and 100 in cash, has an EV of 10, making it a less risky investment.</p>
+
+        <p><strong>Enterprise Value per Share:</strong> This is calculated as EV / total shares in the market. It provides a better metric than share price alone, as it accounts for both debt and cash.</p>
+
+        <p><strong>Intrinsic Value:</strong> This is the actual value of an asset, calculated using the Discounted Cash Flow (DCF) method. If the intrinsic value is greater than the market price, it is considered a good investment.</p>
+
+        <p><strong>Book Value:</strong> This is calculated as Total assets - Total liabilities. It indicates how much investors would receive if the company were liquidated.</p>
+
+        <p><strong>Tangible Book Value:</strong> This is calculated as tangible assets - liabilities. It reflects the money a company would have if it sold all tangible assets to cover liabilities.</p>
+
+        <p><strong>Price to Book (P/B) Ratio:</strong> This is the current stock price per share divided by the current book value per share. A P/B ratio of 1.0 or lower is generally considered a good investment.</p>
+
+        <p><strong>Earnings per Share (EPS):</strong> This is calculated as (Net income - Preferred dividends) / Total shares. A higher EPS compared to the sector indicates a better investment.</p>
+
+        <p><strong>Price to Earnings (P/E) Ratio:</strong> This is calculated as price per stock / earnings per stock (EPS). A high P/E can indicate overvaluation or high growth expectations.</p>
+
+        <p><strong>Forward P/E Ratio:</strong> This measures how much investors are willing to pay for future earnings. It is calculated as stock price / forecasted earnings per stock.</p>
+
+        <p><strong>Trailing P/E Ratio:</strong> This is calculated as stock price / past 12-month earnings per share. It is often compared with the sector P/E.</p>
+
+        <p><strong>Price to Earnings Growth (PEG) Ratio:</strong> This is calculated as (P/E) / Earnings growth rate. A PEG of 1 indicates a fair valuation, while PEG < 1 suggests the stock is undervalued.</p>
+
+        <p><strong>Price to Sales (P/S) Ratio:</strong> This is calculated as market capitalisation / sales. A P/S ratio of less than 1 is generally considered undervalued.</p>
+
+        <p><strong>Price to Cash Flow Ratio (P/CF):</strong> This is calculated as price per stock / net cash flow per stock. A P/CF ratio of less than one is generally a good sign of the stock being undervalued.</p>
+
+        <p><strong>Price to Free Cash Flow (P/FCF):</strong> This reflects actual cash available for non-asset growth. A lower value relative to the sector indicates the stock is undervalued.</p>
+
+        <p><strong>Price to Innovation Ratio:</strong> This is calculated as market cap / R&D spending. A lower value compared to the sector indicates a company investing more in R&D.</p>
+
+        <p><strong>EV/EBITDA:</strong> This is calculated as EV / EBITDA. A value less than 8 is generally considered good, depending on the sector average.</p>
+    </div>
+</div>
+
+<footer>
+    <p> Thank you for checking out this blog.</p>
+</footer>
+
+</body>
+</html>
