@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quant Resources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f6f7f9;
+            --card-bg: #fff;
+            --primary: #22223b;
+            --secondary: #4a4e69;
+            --accent: #3a86ff;
+            --border: #e0e3ea;
+            --radius: 14px;
+            --shadow: 0 2px 16px 0 rgba(34,34,59,0.06);
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Manrope', 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--primary);
+            margin: 0;
+            min-height: 100vh;
+            font-size: 18px;
+            letter-spacing: 0.01em;
+        }
+
+        header {
+            background: #fff;
+            padding: 48px 0 24px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary);
+            letter-spacing: -0.03em;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 18px;
+        }
+
+        .intro-text {
+            margin: 40px auto 32px auto;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px 28px 20px 28px;
+            color: var(--secondary);
+            font-size: 1.08em;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .note {
+            margin: 0 auto 40px auto;
+            background: #f1f7ff;
+            border-radius: var(--radius);
+            border: 1px solid #dbeafe;
+            color: #2563eb;
+            padding: 16px 24px;
+            font-size: 1em;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 800px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        .resource-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px 24px 20px 24px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            min-height: 220px;
+        }
+
+        .resource-card h3 {
+            font-size: 1.25em;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0 0 18px 0;
+            letter-spacing: -0.01em;
+        }
+
+        .resource-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .resource-card li {
+            margin: 0 0 12px 0;
+            padding-left: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .resource-card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .resource-card li::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-right: 14px;
+            margin-top: 1px;
+        }
+
+        .resource-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            border-radius: 6px;
+            padding: 2px 4px;
+            transition: background 0.18s, color 0.18s;
+        }
+
+        .resource-card a:hover {
+            background: #e7f0ff;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Quantitative Finance Resources</h1>
+    </header>
+    <div class="container">
+        <div class="intro-text">
+            Hey, I've put together this collection of resources that I have found in my two years of college. These aren't just random links - each one has helped me personally, and I'm excited to share them with you. From textbooks to tutorials, these are the tools I use almost daily.
+        </div>
+        <div class="note">
+            Note: Every link here leads directly to either a downloadable resource or a carefully selected webpage that I've found particularly helpful. No paywalls or sign-ups needed.
+        </div>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <h3>Books</h3>
+                <ul>
+                    <li><a href="quant_resources/a-practical-guide-to-quantitative-finance-interviews.pdf">A Practical Guide to Quantitative Finance Interviews - Xinfeng Zhou</a></li>
+                    <li><a href="quant_resources/dice1.pdf">A Collection of Dice Problems</a></li>
+                    <li><a href="quant_resources/fifty_challenging_problems_in__2.pdf">Fifty Challenging Problems in Probability</a></li>
+                    <li><a href="quant_resources/trading-interview.pdf">Jane Street's Probability and Markets Guide</a></li>
+                    <li><a href="notes/SI427.pdf">My Probability (SI427) Notes</a></li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>Online Courses</h3>
+                <ul>
+                    <li><a href="https://ocw.mit.edu/courses/15-s50-how-to-win-at-texas-holdem-poker-january-iap-2016/">Texas Hold'em Poker (MIT OCW)</a></li>
+                    <li><a href="https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/">Topics in Mathematics with Applications in Finance (MIT OCW)</a></li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>Practice Questions</h3>
+                <ul>
+                    <li><a href="https://www.brainstellar.com/">Brainstellar Questions</a></li>
+                    <li><a href="https://www.quantguide.io/questions">QuantGuide Interview Questions</a></li>
+                    <li><a href="https://www.tradinginterview.com/courses/market-making/quizzes/market-making-game/">Trading Interview Market Making Game</a></li>
+                    <li><a href="https://www.tradermath.org/">TraderMath (Math Practice)</a></li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>Programming Tools</h3>
+                <ul>
+                    <li><a href="https://www.python.org/">Python (Must Learn)</a></li>
+                    <li><a href="https://pandas.pydata.org/">Pandas (Data Analysis)</a></li>
+                    <li><a href="https://numpy.org/">NumPy (Numerical Computing)</a></li>
+                    <li><a href="https://scikit-learn.org/">Scikit-learn (Machine Learning)</a></li>
+                    <li><a href="https://matplotlib.org/">Matplotlib (Data Visualization)</a></li>
+                    <li><a href="https://jupyter.org/">Jupyter Notebooks (Interactive Development)</a></li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>Data Sources</h3>
+                <ul>
+                    <li><a href="https://www.alphavantage.co/">Alpha Vantage</a></li>
+                    <li><a href="https://www.quandl.com/">Quandl</a></li>
+                    <li><a href="https://finance.yahoo.com/">Yahoo Finance</a></li>
+                    <li><a href="https://www.nseindia.com/">NSE India (scrape data)</a></li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>Communities</h3>
+                <ul>
+                    <li><a href="https://www.quantstart.com/">QuantStart</a></li>
+                    <li><a href="https://www.quantopian.com/posts">Quantopian Forums</a></li>
+                    <li><a href="https://www.reddit.com/r/quant/">r/quant</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
