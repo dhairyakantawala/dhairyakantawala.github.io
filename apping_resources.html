@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apping Resources</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .note-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 15px;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .note-card:hover {
+            transform: scale(1.05);
+        }
+
+        .note-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .note-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .note-link {
+            text-decoration: none;
+            background: #4a90e2;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            transition: background 0.3s ease;
+            margin: 5px 0;
+        }
+
+        .note-link:hover {
+            background: #357ab8;
+        }
+
+        .note-links {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toggle-container">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
+
+    <header>
+        <h1>Apping Resources</h1>
+    </header>
+    
+    <div class="container">
+        <div class="notes-box">
+
+            <div class="note-card">
+                <div class="note-title">Email Generator</div>
+                <div class="note-description">A Jupyter notebook to help you generate personalized emails for professors or universities during the apping process. Easily customize templates and automate the creation of professional emails.</div>
+                <div class="note-links">
+                    <a href="apping_code/email_generator.ipynb" target="_blank" class="note-link">Download email_generator.ipynb</a>
+                </div>
+            </div>
+
+            <div class="note-card">
+                <div class="note-title">Mail Sender</div>
+                <div class="note-description">A Jupyter notebook demonstrating how to connect to LDAP using Python and send bulk emails. Used for personalized bulk mail delivery.</div>
+                <div class="note-links">
+                    <a href="apping_code/mail_sender.ipynb" target="_blank" class="note-link">Download mail_sender.ipynb</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const checkbox = document.getElementById("checkbox");
+        checkbox.addEventListener("change", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+
+</html>
