@@ -1,0 +1,573 @@
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage[a4paper,bottom=6.4mm,left=14.11mm,right=14.11mm,top=62.74mm]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage[table, svgnames]{xcolor}
+\usepackage{hyphenat}
+\usepackage{romannum}
+\usepackage{anyfontsize}
+\usepackage{bold-extra}
+\usepackage{newunicodechar}
+\newunicodechar{₹}{\textit{Rs.}}
+% \usepackage[empty]{fullpage}
+\usepackage{comment}
+% \usepackage[usenames,dvipsnames]{color}
+\usepackage[pdftex]{hyperref}
+\usepackage{fontawesome}
+\usepackage[misc]{ifsym}
+\usepackage{array}
+
+\setlength{\parindent}{0pt}
+\hyphenpenalty 10000
+
+%%%%%%% Command for Thick hline %%%%%%%%%%
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 0.7pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 0.7pt\hskip\tabcolsep}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Command Section Headers %%%%%%%%%%
+\newcommand{\xfill}[2][1ex]{
+	\dimen0=#2\advance\dimen0 by #1
+	\leaders\hrule height \dimen0 depth -#1\hfill
+}
+\renewcommand{\section}[1]{
+	\vspace{5pt}
+	{\color{Blue}{\Large\scshape\raggedright #1\xfill[0pt]{0.5pt}}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Command Subsection Headers %%%%%%%
+\renewcommand{\subsection}[4]{
+	\def\temp{#4}
+	\vspace{2pt}
+	{
+		\large
+		{\color{Black} \textbf{#1}} | {\sl #2} \filldate{#3}
+		\ifx\temp\empty
+		\else
+		{
+			\\[0.1em]
+			\fontsize{10}{13.2}\selectfont
+			\sl #4
+		}
+		\fi
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% Date Formatting %%%%%%%%%%%%%%%%
+\newcommand{\filldate}[1]{\strut\hfill {\small \textit{(#1)}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Set itemize formatting %%%%%%%%%%%
+\renewcommand\labelitemi{\small$\bullet$}
+\setlist[itemize]{itemsep=-0.5mm, topsep=2pt, leftmargin=15pt, after=\vspace{1pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Edit if you want long header %%%%%%%
+% Long Header
+\newif\iflong
+\longtrue
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflong
+	\addtolength{\topmargin}{3.54mm}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				 First Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% Minor %%%%%%%%%%%%%%%%
+% Pursuing \textbf{Honors} in \textbf{Computer Science and Engineering} and \textbf{Minor} in \textbf{Machine Intelligence and Data Science}
+
+%%%%%%%%% Scholastic %%%%%%%%%%%%%%%%%%%%%
+
+\textit{\large{Pursuing a \textbf{Minor} in \textbf{Artificial Intelligence and Data Science} from \textbf{C-MInDS}, IIT Bombay}}
+
+\section{Scholastic Achievements}
+\begin{itemize}
+
+% \item Currently \textbf{2nd} in the Department of Mathematics at IIT Bombay, showcasing consistent academic excellence\filldate{'25}
+\item Awarded an \textbf{AP Scholar Award} with \textbf{perfect scores} in Calculus BC, Physics C: Mechanics, and Chemistry\filldate{'22}
+
+
+
+\item Secured All India Rank 1039 in JEE Mains 2023, being in the \textbf{top 0.1\%} of \textbf{1 million\texttt{+}} candidates nationwide\filldate{'23}
+
+\item Qualified for Regional Round for \textbf{International Finance Olympiad (IFO)} conducted \textbf{by IIFM and ET}\filldate{'19}
+
+
+\end{itemize}
+
+%%%%%%%%%% Professional Experience %%%%%%%%%%%%%%%%%%%%
+\section{Professional Experience}
+
+
+\subsection{Mechanistic Interpretability of ML models}{\normalsize Research Intern: UST, Hong Kong}{May '25 – July '25}{}
+\begin{itemize}
+\item Investigated GPT-2 small hallucination phenomena through mechanistic interpretability by applying \textbf{Transformer Lens}, linear probing, causal patching, and Ecco visualization library to dissect and visualize transformer internals
+\item Designed and ran custom experiments and algorithms on the \textbf{HPC cluster} to isolate layer 4 anomalies as sources of hallucinations, guiding analysis, detailed documentation, and targeted follow-up investigations with collaborator
+\end{itemize}
+
+
+
+\subsection{Automating ETL process using NLP}{\normalsize Winter Intern: Book My Diamond, Mumbai} {Dec '24 - Jan '25} {}
+
+%\subsection{Automating ETL process using NLP}{\normalsize Intern Project: Book My Diamond, Mumbai} {Dec '24 - Jan '25} {\normalsize India's only online diamond trading platform, efficiently facilitating seamless connections between buyers and sellers }
+
+\begin{itemize}
+    
+\item Streamlined the \textbf{extract, transform, and load process} for diamond data using NLP and \textbf{embeddings} to automate \textbf{field} and \textbf{value} mapping, enabling conversion of raw data into a standardized company database format
+
+
+%\item Built a \textbf{vector store} for field mapping, enabling semantic matching of raw data fields to a standardized database schema using \textbf{OpenAI embeddings} for improved mapping accuracy
+
+%\item Automated data transformation through \textbf{specialized pipelines}, processing complex diamond attributes such as \textbf{measurements, girdle, black inclusion}, and \textbf{comments}
+
+%\item Developed a system for \textbf{duplicate detection} and \textbf{field mapping review}, allowing users to edit mappings and ensure accurate field assignments
+%\item Developed a system for \textbf{duplicate detection} and \textbf{field mapping review}, using a \textbf{cosine distance function} to help users identify similar mappings, enabling automation while allowing manual edits to resolve errors and ensure accuracy.
+
+
+\item Developed a system for \textbf{duplicate detection} and \textbf{field mapping review}, using a \textbf{cosine distance function} to identify similar mappings, enabling automation while allowing manual edits to resolve errors and ensure accuracy
+
+% \item Generated \textbf{standardized JSON configurations} for diamond data, facilitating seamless integration with external systems and downstream processing
+
+%\item Generated \textbf{standardized JSON configurations} for diamond data and developed a \textbf{Streamlit UI} to display mappings, allowing users to download the files for integration with external systems and downstream processing
+
+
+
+%\item Enabled \textbf{file uploads} and \textbf{value mapping} for diamond attributes like \textbf{clarity, color, and shape}, standardizing the data for consistent output
+
+%\item Designed the system to support \textbf{extending functionality}, including adding new columns and modifying prompts for improved accuracy in field and value mapping
+
+\end{itemize}
+
+
+
+
+
+
+
+
+\subsection{No-Code Solution for Algorithmic Trading}{\normalsize Summer Intern: Breakout Investing} {Jul '24 - Oct '24} {}
+
+%\subsection{No-Code Solution for Algorithmic Trading}{\normalsize Intern Project: BreakoutAI, Germany} {Jul '24 - Oct '24} {\normalsize Germany’s first AI-driven company specializing in automated algorithmic trading from user's custom strategies }
+
+\begin{itemize}
+
+
+\item Designed the \textbf{end-to-end} architecture for a no-code algorithmic trading platform, utilizing the \textbf{LangChain library} in Python to effectively integrate front-end and back-end components, enhancing functionality and user interaction
+
+\item Transformed raw company data into \textbf{vector embeddings} using \textbf{Pinecone}, effectively enabling the re-training of a \textbf{Large Language Model} (\textbf{LLM}) to intelligently and swiftly generate trading algorithms from user prompt input
+
+%\item Developed a website using \textbf{Mercury} that executes \textbf{generated trading strategies} in real time on \textbf{stock market data}, providing users with instant insights and \textbf{an interactive graph} that visualizes the trading performance
+
+
+%\item Designed the \textbf{end-to-end architecture} for a no-code algorithmic trading platform using \textbf{LangChain} in Python, integrating front-end and back-end components to enhance functionality, user interaction, and the execution of \textbf{generated trading strategies} in real time on \textbf{stock market data}
+
+%\item Transformed raw company data into \textbf{vector embeddings} with \textbf{Pinecone}, enabling the re-training of a \textbf{Large Language Model} (\textbf{LLM}) to intelligently generate trading algorithms from user input, and developed an interactive \textbf{website} with \textbf{Mercury} for real-time insights and performance visualization
+
+
+
+
+        
+\end{itemize}
+
+%%%%%%%%%% Key Projects %%%%%%%%%%%%%%%%%%%%
+
+
+\section{Key Projects}
+
+
+\subsection{Eigenvector Mean‑Reversion Trading}{\normalsize Course Project: Prof. Manjesh K Hanawal}{Apr ’25 – May ’25}{}  
+\begin{itemize}
+  \item Analyzed \textbf{10} years of daily data on \textbf{500} stocks using spectral decomposition, eigenvector clustering, and z‑scores
+\item Backtested an investment thesis yielding \textbf{₹35L} profit on \textbf{₹50L} capital (\textbf{12.2\%} p.a.), beating Nifty 500 by \textbf{3\%}
+\end{itemize}
+
+
+
+\subsection{Music Classification Using MFCC Features}{\normalsize Course Project: Prof. Vinay Kulkarni}{May '24 - Jul '24} {}
+\begin{itemize}
+
+%\item Processed raw audio data, extracted \textbf{MFCC features}, and applied various \textbf{machine learning algorithms} such as \textbf{decision trees, SVM, and neural networks} to classify singers based on their distinct vocal characteristics
+% \item Focused on improving model accuracy through \textbf{feature engineering} and \textbf{dimensionality reduction} techniques
+%\item Achieved a perfect score of \textbf{30/30} and secured \textbf{1st place} in the class of 200+ students for the project on singer classification using \textbf{MFCC features}
+
+\item Focused on improving model accuracy through \textbf{feature engineering} and \textbf{dimensionality reduction}, achieving a perfect score of \textbf{30/30} and securing \textbf{1st place} in a class of 200+ for the classification project with \textbf{MFCC} features
+\end{itemize}
+
+
+\vspace{-13px}
+
+
+\subsection{Option Trading Strategies}{\normalsize Summer of Science (SoS), MnP club, IIT Bombay}{May '24 - Jul '24} {} \begin{itemize}
+
+%\item Conducted comprehensive research on option trading strategies, leveraging insights from \textbf{Option Volatility and Pricing by Sheldon Natenberg} and credible online resources to evaluate strategies and their market effectiveness
+\item Conducted research on option trading strategies using \textbf{Option Volatility and Pricing by Sheldon Natenberg}
+\item Developed a deep understanding of derivative trading strategies, emphasizing key \textbf{technical indicators} and the \textbf{Greeks} that influence market behavior and help assess risk and potential profitability in various trading scenarios
+%\item Developed expertise in derivative strategies, focusing on \textbf{Greeks} and \textbf{technical indicators} to get risk and returns
+     
+\end{itemize}
+
+
+\subsection{Time Series Analysis of Sales Data}{\normalsize Seasons of Code (SoC), WnCC, IIT Bombay   }{May '24 - Jul '24}{}  \begin{itemize}
+
+
+\item Developed a robust expertise in advanced \textbf{time series analysis} methods, including \textbf{S-ARIMA} and \textbf{LightGBM}, to effectively model, analyze, and accurately predict sales trends across various market conditions and scenarios
+
+% \item Specialized in time series analysis with \textbf{S-ARIMA} and \textbf{LightGBM} to predict sales trends across market conditions
+
+%\item Conducted comprehensive \textbf{exploratory data analysis} on daily sales data from given stores, uncovering critical insights that significantly enhanced my \textbf{modeling strategies} and informed data-driven decision-making processes
+
+\item Developed a robust \textbf{XGBoost} forecasting model, achieving a competitive \textbf{9.47\%} Symmetric Mean Absolute Percentage Error \textbf{(SMAPE)}, demonstrating its \textbf{significant} potential impact on business outcomes and strategic
+
+%\item Developed an \textbf{XGBoost} model with \textbf{90.53\%} accuracy, ranking in the \textbf{top 500}, showing potential business value
+\end{itemize}
+
+\subsection{Interest Rate Hike Prediction Model}{\normalsize FinSearch, Finance Club, IIT Bombay}{Jun '24 - Aug '24}{}  \begin{itemize}
+
+%\item Developed an LSTM model to predict interest rate hikes using \textbf{sentiment analysis} on keywords from daily news
+
+
+\item Developed a machine learning model to predict interest rate hikes by scraping news data, building an LSTM model on the daily news data, focusing on \textbf{sentiment analysis} and keyword extraction to gauge potential policy changes
+%\item Developed a strong understanding of macroeconomic factors and their significant influence on global financial markets, achieving \textbf{98\%} accuracy in effectively forecasting future interest rate adjustments using the scraped data
+
+%\item Gained expertise in macroeconomic factors and achieved \textbf{98\% accuracy} in forecasting interest rate adjustments
+
+
+
+        
+\end{itemize}
+
+\subsection{Equity Research Competition}{\normalsize Research project, Finance Club, IIT Bombay}{Sep '24}{}  \begin{itemize}
+
+
+\item Did comprehensive stock analysis using macroeconomic factors,\textbf{ SWOT analysis}, and key quantitative metrics
+\item Developed an investment thesis through assessments of the industry and company to predict stock price movements
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{bottom=6.4mm,left=14.11mm,right=14.11mm,top=16mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Other Projects}
+
+
+
+\subsection{Introduction to Hyperbolic Geometry}{\normalsize Course Project: Prof. Sudhir Ghorpade}{Aug '23 - Nov '23}{}  \begin{itemize}
+
+%\item Explored hyperbolic geometry, a \textbf{non-Euclidean} branch, focusing on its re-imagining of the \textbf{space and distance}
+
+\item Delved into hyperbolic geometry, a fascinating branch of \textbf{non-Euclidean geometry}, focusing on how it deviates from Euclidean concepts by \textbf{re-imagining space} and distance, offering a radically different mathematical framework
+
+%\item Explored the geometry of geodesics, \textbf{hyperbolic triangles}, and distance calculations using logarithms methods
+%\item Investigated the unique features of circles and angles within hyperbolic geometry, where curvature and non-Euclidean properties twist classical ideas, providing fresh perspectives on \textbf{symmetry}, congruence, and geometric relationships
+        
+\end{itemize}
+
+
+
+% \vspace{-16pt}
+
+
+% \subsection{Solving Puzzles with SAT solvers}{Course Project}{March 2023}{Instructor: Prof Ashutosh Gupta}
+% \begin{itemize}
+% 	\item Used the Python API of the Z3 SAT solver to verify if a puzzle where the aim is to move numbers in a grid into a particular configuration by sliding rows and columns is solvable by encoding the puzzle as a Boolean expression
+% \end{itemize}
+
+
+
+% \subsection{Machine Learning}{Summer of Science: Maths and Physics Club}{May 2022 - July 2022}{}
+% \begin{itemize}
+% 	\item Studied the \textbf{Mathematics of Machine Learning}, \textbf{Support Vector Machines} and \textbf{Neural Networks}
+% 	\item Compiled a report on Machine Learning and gave a presentation on the details of \textit{Statistics in Machine Learning}
+% \end{itemize}
+
+% \vspace{-8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newpage
+% \newgeometry{bottom=6.4mm,left=14.11mm,right=14.11mm,top=16mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\subsection{Origami and Mathematics}{\normalsize Course Project: Prof. Madhusudan Manjunath}{Aug '23 - Nov '23}
+{}
+
+\begin{itemize}
+
+\item Researched origami constructions, focusing on folding techniques for \textbf{angle trisection} and \textbf{cube root extraction}
+
+%\item Researched classical origami constructions, focusing on some folding techniques that address geometric problems like \textbf{angle trisection} and \textbf{cube root extraction}, which cannot be solved using only a compass and straightedge
+
+%\item Analyzed the relationship between \textbf{origami axioms} and \textbf{algebraic geometry}, demonstrating how paper folding techniques can be used to solve \textbf{polynomial equations} and explore higher-dimensional \textbf{geometric constructions}
+
+\item Explored how \textbf{origami axioms} and \textbf{algebraic geometry} solve polynomials and higher-dimensional constructions
+
+\end{itemize}
+
+
+% \subsection{ADHD Support and Assistance Chatbot Agent}{\normalsize Self Project}{Dec '24}{}  \begin{itemize}
+
+% \item Designed a system to process PDF textbooks and articles, converting them into vector representations for storage
+% %\item Built a \textbf{comprehensive database} integrated with an \textbf{AI agent}, designed to interact with the stored information
+% \item Created an chatbot that communicates in a friendly manner, addressing ADHD challenges and providing support        
+% \end{itemize}
+
+\subsection{Geospatial Mapping and Visualization of Tree Data}{\normalsize Self Project}{Dec '24}{}  \begin{itemize}
+
+
+\item Collected tree data from an NGO and visualized it using \textbf{GeoPandas} with \textbf{age-based and type-based} coding
+
+
+\item Enhanced the visualization by adding insights on top tree species, age distribution, and other important attributes
+
+        
+\end{itemize}
+
+
+\subsection{Sudoku Solver Algorithm in C++}{\normalsize Self Project}{Mar '24 - Apr '24}{}  \begin{itemize}
+
+\item Developed a \textbf{recursive backtracking algorithm} to solve Sudoku puzzles, while ensuring valid number placement
+
+%\item The program \textbf{validates constraints} across rows, columns, and grids, ensuring correct placements before solution
+
+
+\item Implemented logic to \textbf{handle unsolvable cases}, ensuring the program backtracks \textbf{when no valid solutions} exist
+
+        
+\end{itemize}
+
+
+\subsection{GPT-2 Small From Scratch Implementation}{\normalsize Self Project}{May ’25 – June ’25}{} \begin{itemize}
+\item Developed a custom language model using PyTorch with byte-pair encoding, self-attention and \textbf{transformer layers}
+
+\item Created comprehensive notes detailing the \textbf{linear algebra and calculus} underpinning the model’s architecture
+\end{itemize}
+
+
+% \subsection{Handwriting to Unicode Converter}{\normalsize Self Project}{June '24 - July '24}{}  \begin{itemize}
+
+% \item Developed a Handwriting to Unicode Converter using \textbf{Python, Tkinter, and PIL} for 28x28 image processing
+
+
+% \item Integrated an \textbf{SVM with RBF kernel} for handwritten digit classification, achieving \textbf{89\% accuracy} on images
+
+% \end{itemize}
+
+ \subsection{Pair Trading Strategy Using Polynomial Regression}{\normalsize Self Project}{May '25 – June '25}{}  
+\begin{itemize}
+  \item Designed a robust market‑neutral pairs strategy using \textbf{polynomial regression} and \textbf{ADF, Engle–Granger} tests
+
+  \item \textbf{Backtested} the pipeline in Python (Backtrader/Cerebro), demonstrating robust returns on historical equity data
+
+\end{itemize}
+
+\subsection{Modern Portfolio Theory Optimization Visualization Dashboard}{\normalsize Self Project}{June ’25}{}
+\begin{itemize}
+  \item Built an interactive Markowitz optimizer in \textbf{Python/Streamlit}, visualizing \textbf{efficient frontier} and capital line
+  
+\item Backtested via \textbf{Monte Carlo} and \textbf{CAPM}/Sharpe analysis, displaying \textbf{10-year} performance metrics graphically
+
+\end{itemize}
+
+
+\subsection{Personalized Cold Email Generation Engine}{\normalsize Self Project}{Jan '25 - Feb '25}{}
+\begin{itemize}
+\item Developed automated Selenium scraper extracting \textbf{1000+ profiles} and research interests from university websites
+  
+\item Implemented \textbf{NLP-based} email personalization with \textbf{transformer model}, generating tailored emails for professors
+
+\end{itemize}
+
+%%%%%%%%%%% TAships %%%%%%%%%%%%%%%%%
+
+\section{Positions of Responsibility}
+
+\subsection{Institute Academic Coordinator}{\normalsize Student Support Services, UGAC}{June '24 - March '25\vspace{0pt}}{}
+
+\begin{itemize}
+
+\item Acquainted and assisted \textbf{over 1,000 undergraduate} students with their course registration process in the institute
+
+\item Curated and ran \textbf{Mental Health Mondays} on social media to actively promote student well-being and awareness
+
+%\item Organised \textbf{help sessions (TSCs)} for \textbf{15\texttt{+}} freshman and sophomore courses, witnessing an attendance of \textbf{500\texttt{+}} 
+
+\item Executed a \textbf{1 week} long orientation for \textbf{1500\texttt{+}} \textbf{UG new entrants} along with \textbf{2000\texttt{+}} parents in an offline setting
+
+%\item Streamlined the process of \textbf{TA selection} across 5+ departments by effectively connecting professors and applicants
+
+%\item Spread awareness about \textbf{Course Information} and \textbf{Mental Health} among undergraduate students by curating and designing series of impactful \textbf{social media posts}, recording a significant \textbf{36\% increase} in online engagement
+
+%\item Acquainted and assisted \textbf{over 1,000 undergraduate} students with their course registration process in the institute
+
+
+\end{itemize}
+
+
+\subsection{Linear Algebra and Differential Equations}{\normalsize Teaching Assistant, Math Department} {Jan '25 - April '25} {}
+
+\begin{itemize}
+\item Helped prepare the tutorial solution booklet, coordinated peer discussions, and supported overall course logistics
+\end{itemize}
+
+
+%\subsection{Teaching Assistant MA105, Calculus}{\normalsize Department of Mathematics} {Aug '24 - Nov '24} {}
+
+\subsection{Calculus}{\normalsize Teaching Assistant, Math Department} {Aug '24 - Nov '24} {}
+
+\begin{itemize}
+\item Assisted \textbf{30\texttt{+}} first-year students in weekly \textbf{tutorial} sessions through problem solving and \textbf{doubt clarification}
+ %\item  Provided \textbf{logistical} support to the professor-in-charge through invigilation and evaluations of \textbf{1400\texttt{+} students}
+\item Organised and conducted \textbf{TSC} (Tutorial Service Centre), providing a recap of the course to over 300+ students
+\end{itemize}
+
+
+
+    
+%%%%%%%%%%% PORs %%%%%%%%%%%%%%%%%
+% \section{Positions of Responsibility}
+
+
+%\subsection{Institute Academic Coordinator}{\normalsize Student Support Services, UGAC}{June '24 - March '25\vspace{2pt}}{Selected among \textbf{4 out of 150\texttt{+}} applicants via rigorous interviews, addressing queries of \textbf{5000\texttt{+}} undergraduates}
+
+
+
+% \subsection{Department Research Coordinator for Mathematics}{\normalsize EnPoWER, UGAC}{June '25 - Present\vspace{0pt}}{}
+
+% \begin{itemize}
+%   \item Developing and implementing initiatives to enhance \textbf{undergraduate} \textbf{research engagement}, like Student-Professor \textbf{Research Database}, Journal Clubs, SIGs, Lab Open Days, industry-connect hackathons, and student seminars
+% \end{itemize}
+
+
+% \subsection{Department Academic Mentor}{\normalsize Student Mentorship Programme}{June '25 - Present\vspace{0pt}}{}
+
+% \begin{itemize}
+% \item Guiding sophomores with academic and extra-curricular decisions, helping them better navigate their curriculum
+% \end{itemize}
+
+%%%%%%%%% Technical Skills %%%%%%%%%
+\section{Technical Skills}
+
+\vspace{3px}
+
+\begin{tabularx}{\textwidth}{ p{3cm}  m{14.5cm} }
+ \textbf{Programming} & 
+ Python, R, C++, \LaTeX, Azure, Jupyter Notebook, AWS, Pinecone database, SQL, Spark\\ 
+	\textbf{Libraries} & TensorFlow, Keras, PyTorch, scikit-learn, NumPy, Pandas, MatPlotLib, LangChain, streamlit\\
+	\textbf{Data Analysis} & BeautifulSoup, Excel, Power BI, Data Cleaning, Statistical Analysis, Data Interpretation\\
+	% \textbf{Software and Libraries} & Jupyter Notebook, NumPy, MatPlotLib, Git, OpenGL, GDB, Doxygen, Sphinx \\
+	% \textbf{Documentation} & Doxygen, Sphinx
+\end{tabularx}
+
+
+
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newpage
+% \newgeometry{bottom=6.4mm,left=14.11mm,right=14.11mm,top=16mm}
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% International exp %%%%%%%%%%%%%
+\begin{comment}
+\section{International Exposure}
+
+
+\begin{itemize}
+
+
+\item Attended Summer School at the \textbf{University of Oxford}: Acquired global exposure, engaged with world-renowned faculty, and collaborated with a diverse group of international students on \textbf{Business and Entrepreneurship} topic
+
+\item Participated in the \textbf{British Origami Society Convention}, connecting with 100+ passionate origamists worldwide
+
+\item Attended \textbf{Pacific Coast Origami Convention (PCOC)} by \textbf{OrigamiUSA} to enhance skills and network globally
+
+\end{itemize}
+\end{comment}
+%%%%%%%%% Extracurrics %%%%%%%%%%%%%
+%\section{Key Courses Undertaken}
+
+%\vspace{3px}
+
+%\begin{tabularx}{\textwidth}{ p{4cm}  m{13.5cm} }
+ %\textbf{Mathematics} & 
+ %Probability I$^*$, Linear Algebra$^*$, Calculus, An Introduction to Mathematical Concepts, Mathematics and Its History, Linear Algebra and Differential Equations, Basic Algebra$^*$, Real Analysis$^*$\\ 
+	%\textbf{Computer science} & Programming for Data Science$^*$, Computer Programming and Utilization\\
+	%\textbf{Other Courses} & Economics$^*$, Introduction to Classical and Quantum Physics, Introduction to Innovation \& Entrepreneurship, Introduction to Design, Makerspace	\\
+	% \textbf{Software and Libraries} & Jupyter Notebook, NumPy, MatPlotLib, Git, OpenGL, GDB, Doxygen, Sphinx \\
+ 
+	% \textbf{Documentation} & Doxygen, Sphinx
+%\end{tabularx}
+
+%\filldate{* To be completed by Nov '24}
+
+\section{Extracurricular Activities}
+
+\vspace{3px}
+
+
+
+\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}m{2.3cm} " m{14cm}}
+	\textbf{Origami} & \begin{itemize}
+		\item Created and managed online origami \textbf{portfolio} for 5 years, showcasing intricate designs
+
+        \vspace{-8px}
+
+
+  
+	\end{itemize}
+	\\ \thickhline
+
+	\textbf{International Exposure} & \begin{itemize}
+\item Attended Summer School at the \textbf{University of Oxford}, where I gained invaluable global exposure in Business and Entrepreneurship, enhancing my understanding of markets
+ 
+\item Participated in \textbf{British Origami Society} Convention, connecting with over 85 origamists, exchanging techniques, ideas, and fostering deeper appreciation for the art
+
+
+\item Attended \textbf{Pacific Coast Origami Convention (PCOC) hosted by OrigamiUSA}, enhancing my origami skills while networking with global artists and enthusiasts
+
+        \vspace{-8px}
+	\end{itemize}
+	 \\ \thickhline
+	 \textbf{Volunteering} & \begin{itemize}
+
+     \item Volunteered as a \textbf{Data Visualization Specialist} for \textbf{Data Science for Anand Good (DSAG)}, delivering insights and visualizations to support data-driven decisions
+
+	 \item \textbf{Mentored and guided} JEE Aspirants of 2024 and 2025 batches from across the nation
+
+    \item Volunteered to teach \textbf{Mathematics} to students under \textbf{Educational Outreach}, \textbf{NSS}
+
+
+
+
+
+
+
+
+        \vspace{-8px}
+
+ 
+  
+	 \end{itemize}
+\end{tabularx}
+
+
+\end{document}
