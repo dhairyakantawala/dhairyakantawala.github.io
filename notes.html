@@ -17,7 +17,7 @@
 
 
         .note-card {
-            background: white;
+            background: var(--surface-color);
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             margin: 15px;
@@ -34,12 +34,12 @@
             font-size: 1.25rem;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #333;
+            color: var(--text-color);
         }
 
         .note-description {
             font-size: 0.9rem;
-            color: #666;
+            color: var(--muted-color);
             margin-bottom: 10px;
         }
 
@@ -68,7 +68,7 @@
 
 <body>
     <div class="toggle-container">
-        <input type="checkbox" class="checkbox" id="checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox" role="switch" aria-checked="false" aria-label="Switch to dark mode">
         <label for="checkbox" class="checkbox-label">
             <i class="fas fa-moon"></i>
             <i class="fas fa-sun"></i>
@@ -303,12 +303,7 @@
         </div>
     </div>
 
-    <script>
-        const checkbox = document.getElementById("checkbox");
- checkbox.addEventListener("change", () => {
-            document.body.classList.toggle("dark-mode");
-        });
-    </script>
+    <script src="theme.js" defer></script>
 </body>
 
 </html>
