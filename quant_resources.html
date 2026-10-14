@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            color-scheme: light;
             --bg: #f6f7f9;
             --card-bg: #fff;
             --primary: #22223b;
@@ -16,20 +15,6 @@
             --border: #e0e3ea;
             --radius: 14px;
             --shadow: 0 2px 16px 0 rgba(34,34,59,0.06);
-        }
-        :root[data-theme="dark"] {
-            color-scheme: dark;
-            --bg: #151925;
-            --card-bg: #202638;
-            --primary: #edf0fa;
-            --secondary: #b7bfd3;
-            --accent: #93baff;
-            --border: #394258;
-            --shadow: 0 2px 16px rgba(0,0,0,.25);
-            --bg-color: var(--bg);
-        }
-        html, body, header, .intro-text, .note, .resource-card, .resource-card a {
-            transition: background-color 420ms ease, color 420ms ease, border-color 420ms ease, box-shadow 420ms ease;
         }
 
         html, body {
@@ -47,7 +32,7 @@
         }
 
         header {
-            background: var(--card-bg);
+            background: #fff;
             padding: 48px 0 24px 0;
             text-align: center;
             border-bottom: 1px solid var(--border);
@@ -166,22 +151,9 @@
             background: #e7f0ff;
             color: var(--accent);
         }
-            .toggle-container { position: absolute; top: 20px; left: 20px; z-index: 10; }
-        .checkbox { opacity: 0; position: absolute; width: 1px; height: 1px; }
-        .checkbox:focus-visible + .checkbox-label { outline: 3px solid var(--accent); outline-offset: 4px; }
-        .checkbox-label { display: block; position: relative; width: 62px; height: 34px; padding: 5px; border-radius: 999px; background: #343b50; cursor: pointer; box-shadow: 0 3px 10px var(--shadow); }
-        .checkbox-label .ball { position: absolute; top: 5px; left: 5px; width: 24px; height: 24px; border-radius: 50%; background: white; transition: transform 420ms cubic-bezier(.2,.8,.2,1); }
-        .checkbox:checked + .checkbox-label .ball { transform: translateX(28px); }
-        .note { background: color-mix(in srgb, var(--accent) 9%, var(--bg)); border-color: var(--border); color: var(--accent); }
-        .resource-card a:hover { background: color-mix(in srgb, var(--accent) 16%, var(--card-bg)); }
-        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
     </style>
 </head>
 <body>
-    <div class="toggle-container">
-        <input type="checkbox" class="checkbox" id="checkbox" role="switch" aria-checked="false" aria-label="Switch to dark mode">
-        <label for="checkbox" class="checkbox-label" aria-hidden="true"><span class="ball"></span></label>
-    </div>
     <header>
         <h1>My Quantitative Finance Resources</h1>
     </header>
@@ -249,6 +221,5 @@
             </div>
         </div>
     </div>
-    <script src="theme.js" defer></script>
 </body>
 </html>
